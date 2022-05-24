@@ -270,7 +270,7 @@ static inline void nmea_ftoa(struct nmea_float *f, char* buff)
  * Конвертер сырых координат в число с плавающей точкой DD.DDD....
  * Возвращает NaN для "непонятных" значений.
  */
-static inline float nmea_tocoord(struct nmea_float *f)
+static inline float nmea_tocoord(const struct nmea_float *f)
 {
 	if (f->scale == 0)
 		return NAN;
