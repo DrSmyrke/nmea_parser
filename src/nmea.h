@@ -17,6 +17,9 @@ extern "C" {
 #include <math.h>
 
 #define NMEA_MAX_LENGTH				256
+#define NMEA_LEN					16
+#define FREQ_LEN					14
+#define BAUD_LEN					28
 
 
 //------------------- VARIABLES ---------------------------
@@ -156,6 +159,22 @@ struct nmea_sentence_zda {
 	int hour_offset;
 	int minute_offset;
 };
+
+extern uint8_t turn_Off_GPGGA[NMEA_LEN];
+extern uint8_t turn_Off_GPGLL[NMEA_LEN];
+extern uint8_t turn_Off_GPGSA[NMEA_LEN];
+extern uint8_t turn_Off_GPGLV[NMEA_LEN];
+extern uint8_t turn_Off_GPRMC[NMEA_LEN];
+extern uint8_t turn_Off_GPVTG[NMEA_LEN];
+// <<---------------------------------------------------------------------------//on packets
+extern uint8_t turn_On_GPGGA[NMEA_LEN];
+extern uint8_t turn_On_GPGLL[NMEA_LEN];
+extern uint8_t turn_On_GPGSA[NMEA_LEN];
+extern uint8_t turn_On_GPGLV[NMEA_LEN];
+extern uint8_t turn_On_GPRMC[NMEA_LEN];
+extern uint8_t turn_On_GPVTG[NMEA_LEN];
+extern uint8_t updateFreq[FREQ_LEN];
+extern uint8_t changeBaud[BAUD_LEN];
 
 //------------------- FUNCTIONS ---------------------------
 /**
